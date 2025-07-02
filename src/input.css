@@ -424,7 +424,15 @@ html, body {
     }
 
     .image img{
-        max-height: 30%;
+        max-height: 40%;
+    }
+
+    .mail2{
+        display: none;
+    }
+
+    .image{
+        right: 0;
     }
 
     .about{
@@ -643,6 +651,8 @@ html, body {
     }
     
  }
+
+ 
 
 
 
