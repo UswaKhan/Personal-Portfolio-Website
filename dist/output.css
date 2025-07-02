@@ -1926,6 +1926,10 @@ html, body {
   .main-cards{
     gap: 40px;
   }
+
+  .walmart{
+    gap: 100px;
+  }
 }
 
 @media (max-width: 1320){
