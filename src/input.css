@@ -1,0 +1,938 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-pagination .swiper-pagination-bullet {
+    @apply w-3 h-3 bg-white opacity-100 rounded-full transition-all duration-300 ;
+  }
+
+  .custom-pagination .swiper-pagination-bullet-active {
+    @apply w-3 h-3 bg-light-green opacity-100;
+  }
+
+:root{
+    --border1: #212529;
+}
+
+
+ @media (max-width: 1400px) {
+    .main-bg{
+        height: auto;
+    }
+
+    .main-content{
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+
+    .main-cards{
+        gap: 40px
+    }
+ }
+
+ @media (min-width: 1400px) {
+    .main-bg{
+        height: auto;
+    }
+
+    .main-content{
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+
+    .main-cards{
+        gap: 40px;
+    }
+
+ }
+
+ @media (max-width: 1320){
+    .main-banner{
+        max-width: 1323px;
+    }
+ }
+
+ @media (min-width: 2560px){
+    #navbar{
+        justify-content: space-evenly;
+    }
+
+    .logo{
+        border-right: none;
+        border-left: 1px solid var(--border1);
+        padding-left: 40px;
+    }
+
+    .btns{
+        border-left: none;
+        border-right: 1px solid var(--border1);
+        padding-right: 40px;
+    }
+
+    .image{
+        padding-right: 450px;
+    }
+
+    .main-content{
+        padding-left: 350px;
+        padding-top: 100px;
+    }
+
+    .personal{
+        width: 55%;
+    }
+
+    .awards{
+        padding-left: 580px;
+        padding-right: 580px;
+    }
+
+    .main-cards{
+        justify-content: center;
+    }
+
+    .togeather{
+        width: 30%;
+    }
+
+    .man-desk{
+        width: 20%;
+    }
+
+    .services-cards{
+        justify-content: center;
+        gap: 100px;
+    }
+
+    .slider{
+        width: 55%;
+
+    }
+
+    .l{
+        width: 20%;
+    }
+
+    .r{
+        width: 40%;
+    }
+
+    .get-in-touch-section{
+        padding-left: 600px;
+        padding-right: 600px;
+    }
+
+    .footer{
+        justify-content: center;
+        gap: 350px;
+    }
+
+    .sidebar{
+        width: 15%;
+    }
+
+ }
+
+  /* @media (max-width: 2560px){
+    #navbar{
+        justify-content: space-evenly;
+    }
+
+    .logo{
+        border-right: none;
+        border-left: 1px solid var(--border1);
+        padding-left: 40px;
+    }
+
+    .btns{
+        border-left: none;
+        border-right: 1px solid var(--border1);
+        padding-right: 40px;
+    }
+
+    .image{
+        padding-right: 450px;
+    }
+
+    .main-content{
+        padding-left: 350px;
+        padding-top: 100px;
+    }
+
+    .personal{
+        width: 55%;
+    }
+
+    .awards{
+        padding-left: 580px;
+        padding-right: 580px;
+    }
+
+    .main-cards{
+        justify-content: center;
+    }
+
+    .togeather{
+        width: 30%;
+    }
+
+    .man-desk{
+        width: 20%;
+    }
+
+    .services-cards{
+        justify-content: center;
+        gap: 100px;
+    }
+
+    .slider{
+        width: 55%;
+
+    }
+
+    .l{
+        width: 20%;
+    }
+
+    .r{
+        width: 40%;
+    }
+
+    .get-in-touch-section{
+        padding-left: 600px;
+        padding-right: 600px;
+    }
+
+
+    .footer{
+        justify-content: center;
+        gap: 350px;
+    }
+
+    .sidebar{
+        width: 15%;
+    }
+
+ } */
+
+  /* @media (min-width: 1024px){
+    .get-in-touch{
+        font-size: 107px;
+    }
+
+    .footer-btn{
+        gap: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #navbar ul{
+        font-size: 14px; 
+    }
+
+    .talk{
+        font-size: 16px;
+        padding: 8px 10px;
+        margin-top: 5px;
+    }
+
+    .talk img{
+        height: 20px;
+    }
+
+    #openSidebar {
+        margin-top: 5px;
+    }
+
+    .logo img{
+        height: 30px;
+    }
+
+    .sidebar{
+        max-width: 30%;
+    }
+
+    .personal{
+        gap: 20px;
+    }
+
+ }  */
+
+  /* @media (min-width: 768px) {
+    .get-content{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .get-in-touch-section{
+        padding: 100px 0;
+    }
+
+    .logo img{
+        height: 30px;
+    }
+
+    .talk{
+        font-size: 14px;
+        padding: 1px 8px;
+    }
+
+    .container{
+        padding: 0;
+    }
+
+    .left-banner{
+        display: none;
+    }
+
+    .right-banner{
+        display: none;
+    }
+
+    .image{
+        height: 70%;
+        bottom: 0;
+        right: 0;
+
+    }
+
+    .sidebar{
+        max-width: 35%;
+    }
+
+    .reveal{
+        font-size: 22px;
+    }
+
+    .tabs1 li{
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .personal{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .person1{
+        max-width: 100%;
+    }
+
+    .show-content{
+        max-width: 100%;
+    }
+
+    .awards{
+        padding: 100px 30px;
+    }
+
+    .our{
+        font-size: 16px;
+    }
+
+    .our1{
+       padding-left: 100px;
+    }
+
+    .portfolio{
+        font-size: 40px;
+    }
+
+    .need-help{
+        flex-direction: column;
+    }
+
+    .togeather{
+        max-width: 100%;
+    }
+
+    .man-desk{
+        max-width: 70%;
+    }
+
+    .special-services{
+        font-size: 40px;
+    }
+
+    .services-cards{
+        gap: 20px;
+    }
+
+    .dreams{
+        font-size: 40px;
+    }
+
+    .cards{
+        flex-direction: column;
+    }
+
+    .testie{
+        font-size: 40px;
+    }
+
+    .testimonial{
+        padding: 30px;
+    }
+
+    .slider{
+        padding: 20px 20px;
+       
+    }
+
+    .left-img{
+        opacity: 0.3;
+    }
+
+    .right-img{
+        opacity: 0.3;
+    }
+
+    .walmart{
+        gap: 20px;
+    }
+    
+    .blog-cards{
+        flex-direction: column;
+        gap: 250px;
+    }
+
+    .l{
+        max-width: 100%;
+    }
+
+    .r{
+        max-width: 100%;
+    }
+
+    .get-in-touch-section{
+        padding: 100px 40px;
+    }
+
+    .get-in-touch{
+        font-size: 70px;
+    }
+
+    .footer{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+ }  */
+
+  @media (max-width: 1400px){
+    .get-in-touch{
+        font-size: 107px;
+    }
+
+    .footer-btn{
+        gap: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #navbar ul{
+        font-size: 14px; 
+    }
+
+    .talk{
+        font-size: 16px;
+        padding: 8px 10px;
+        margin-top: 5px;
+    }
+
+    .talk img{
+        height: 20px;
+    }
+
+    #openSidebar {
+        margin-top: 5px;
+    }
+
+    .logo img{
+        height: 30px;
+    }
+
+    .sidebar{
+        max-width: 30%;
+    }
+
+    .personal{
+        gap: 20px;
+    }
+
+ }
+ 
+ @media (max-width: 1024px) {
+    
+    .get-in-touch-section{
+        padding: 100px 0;
+    }
+
+    .logo img{
+        height: 30px;
+    }
+
+    .talk{
+        font-size: 14px;
+        padding: 1px 8px;
+    }
+
+    .container{
+        padding: 0;
+    }
+
+    .left-banner{
+        display: none;
+    }
+
+    .right-banner{
+        display: none;
+    }
+
+    .image{
+        min-height: 70%;
+        bottom: 0;
+        right: 0;
+
+    }
+
+    .sidebar{
+        max-width: 35%;
+    }
+
+    .reveal{
+        font-size: 31px;
+    }
+
+    .person1{
+        max-width: 100%;
+    }
+
+    .show-content{
+        max-width: 100%;
+    }
+
+    .awards{
+        padding: 100px 30px;
+    }
+
+    .our{
+        font-size: 16px;
+    }
+
+    .our1{
+       padding-left: 100px;
+    }
+
+    .portfolio{
+        font-size: 40px;
+    }
+
+    .togeather{
+        max-width: 100%;
+    }
+
+    .man-desk{
+        max-width: 70%;
+    }
+
+    .special-services{
+        font-size: 40px;
+    }
+
+    .services-cards{
+        gap: 20px;
+    }
+
+    .dreams{
+        font-size: 40px;
+    }
+
+    .testie{
+        font-size: 40px;
+    }
+
+    .testimonial{
+        padding: 30px;
+    }
+
+    .slider{
+        padding: 20px 20px;
+       
+    }
+
+    .left-img{
+        opacity: 0.3;
+    }
+
+    .right-img{
+        opacity: 0.3;
+    }
+
+    .walmart{
+        gap: 20px;
+    }
+
+    .l{
+        max-width: 100%;
+    }
+
+    .r{
+        max-width: 100%;
+    }
+
+    .get-in-touch-section{
+        padding: 100px 40px;
+    }
+
+    .get-in-touch{
+        font-size: 70px;
+    }
+ }
+
+ @media (max-width: 885px){
+    .get-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+ }
+
+ @media (max-width: 768px){
+    .image{
+        max-height: 80%;
+    }
+
+    .reveal{
+         font-size: 22px;
+    }
+
+    .tab2{
+        font-size: 16px;
+    }
+
+    .tab2 li{
+        padding: 10px 20px;
+    }
+
+    .personal{
+        flex-direction: column;
+        height: auto;
+    }
+    .person1{
+        width: 100%;
+    }
+
+    .show-content{
+        width: 100%;
+    }
+
+    .our{
+        font-size: 17px;
+    }
+
+    .work{
+        padding: 50px 20px;
+    }
+
+    .need-help{
+        flex-direction: column;
+    }
+
+    .togeather{
+        width: 100%;
+    }
+
+    .man-desk{
+        width: 100%;
+    }
+
+    .cards{
+        flex-direction: column;
+    }
+
+    .blog-cards{
+        flex-direction: column;
+    } 
+
+    .l{
+        width: 100%;
+    }
+
+    .r{
+        margin-top: 250px;
+        width: 100%;
+    }
+
+    .footer{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sidebar{
+        width: 40%;
+    }
+ }
+
+  @media (max-width: 425px){
+
+    .talk{
+        display: none;
+    }
+
+    .visual{
+        font-size: 30px;
+    }
+
+    .available{
+        font-size: 16px;
+    }
+
+    .sidebar{
+        min-width: 100%;
+    }
+
+    .play {
+        width: 90%;
+        height: 90%;
+    }
+
+    .availability{
+        width: 100%;
+    }
+
+    .image img{
+        max-height: 30%;
+    }
+
+    .about{
+        padding: 10px;
+    }
+
+    .reveal{
+         font-size: 18px;
+    }
+
+    .tab2 li{
+        text-align: center;
+    }
+
+    .tab2{
+        font-size: 12px;
+        display: grid;
+        grid-template-columns: 100px 100px;
+    }
+
+    .personal{
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .person2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .person1{
+        width: 100%;
+    }
+
+    .awards{
+        padding: 40px 10px;
+    }
+
+    .show-content{
+        width: 100%;
+    }
+
+    .our{
+        font-size: 17px;
+        padding: 10px;
+    }
+
+    .our-text{
+        font-size: 24px;
+    }
+
+    .our1{
+        padding-left: 0;
+    }
+
+    .work{
+        padding: 40px 10px;
+    }
+
+    .lets-work{
+        font-size: 24px;
+    }
+
+    .main-cards{
+        flex-direction: column;
+    }
+
+    .circle{
+        left: 20px;
+    }
+
+    .need-help{
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .services{
+        padding: 10px;
+        margin-top: 40px;
+    }
+
+    .special-services{
+        font-size: 24px;
+    }
+
+    .services-cards{
+        flex-direction: column;
+    }
+
+    .togeather{
+        width: 100%;
+    }
+
+    .man-desk{
+        width: 100%;
+    }
+
+    .big{
+        font-size: 30px;
+    }
+
+    .cards{
+        flex-direction: column;
+    }
+
+    .working2{
+        padding: 10px;
+    }
+
+    .dreams{
+        justify-content: flex-start;
+    }
+
+    .slider{
+        padding: 10px;
+    }
+
+    .blogs5{
+        flex-direction: column;
+    }
+    
+    .i1{
+        width: 20%;
+    }
+
+    .i2{
+        width: 20%;
+    }
+
+    .i3{
+        width: 20%;
+    }
+
+    .i4{
+        width: 20%;
+    }
+
+    .testimonial{
+        display: none;
+    }
+
+    .blog{
+        margin-top: 80px;
+    }
+
+    .blog-cards{
+        flex-direction: column;
+        padding: 40px 10px;
+    } 
+
+    .l{
+        width: 100%;
+    }
+
+    .r{
+        margin-top: 250px;
+        width: 100%;
+    }
+
+    .get-in-touch-section{
+        padding: 40px 10px;
+    }
+
+    .get-in-touch{
+        font-size: 30px;
+    }
+
+    .website{
+        font-size: 20px;
+    }
+
+    .footer-btn{
+        font-size: 14px;
+        padding: 20px 10px;
+    }
+
+    .footer3{
+        gap: 10px;
+    }
+
+    .footer4{
+        gap: 10px;
+    }
+
+    .footer{
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 10px;
+    }
+
+    .copy{
+        justify-content: center;
+        text-align: center;
+    }
+
+    .year{
+        font-size: 16px;
+    }
+
+    .post{
+        font-size: 16px;
+    }
+
+    .post2{
+        font-size: 16px;
+    }
+
+    .grid2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .portfolio{
+        font-size: 30px;
+    }
+    
+ }
+
+
+
+ 
+
+ 

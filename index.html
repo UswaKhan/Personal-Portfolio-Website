@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matias
+  </title>
+  <link href="./dist/output.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+</head>
+
+<body class="bg-icons">
+
+  <section id="home" class="relative w-full min-h-screen overflow-hidden">
+
+    <div
+      class="main-banner absolute inset-0 min-w-screen max-w-none bg-[url('/assets/banner.png')] bg-no-repeat bg-center bg-cover sm:bg-scroll bg-fixed z-[-1]">
+    </div>
+
+    <nav id="navbar"
+      class="w-full fixed top-0 left-0 z-50 h-auto flex justify-between pl-3 border-b-[1px] border-border1 transition-colors duration-500">
+
+      <div class="logo cur flex items-center xl1400:border-r-[1px] border-border1 pb-8 pr-4 pt-8 ">
+        <img class="h-9" src="assets/logo.png" alt="">
+      </div>
+
+      <div class="tabs hidden lg:flex items-center">
+        <ul class="flex font-prompt gap-10 lg:text-md mb-0">
+          <li><a class="no-underline text-white hover:text-light-green font-normal" href="#home">HOME</a></li>
+          <li><a class="no-underline text-white hover:text-light-green font-normal" href="#about">ABOUT</a></li>
+          <li><a class="no-underline text-white hover:text-light-green font-normal" href="#work">WORK</a></li>
+          <li class="relative group">
+            <a class="no-underline text-white hover:text-light-green font-normal cursor-pointer"
+              href="#services">SERVICES</a>
+            <ul
+              class="absolute left-0 top-10 pt-[10px] hidden group-hover:block bg-white text-black shadow-md min-w-[250px] z-50">
+              <div class="absolute top-0 left-6 -translate-y-1/2 w-5 h-5 bg-white rotate-45 z-[-1]"></div>
+              <li><a href=""
+                  class="block px-4 py-2 hover:text-light-green transition-all duration-300 transform hover:translate-x-2">Services</a>
+              </li>
+              <li><a href="#services-details"
+                  class="block px-4 py-2 hover:text-light-green transition-all duration-300 transform hover:translate-x-2">Services
+                  Details</a></li>
+            </ul>
+          </li>
+          <li><a class="no-underline text-white hover:text-light-green font-normal" href="#testimonial">TESTIMONIAL</a>
+          </li>
+          <li class="relative group">
+            <a class="no-underline text-white hover:text-light-green font-normal cursor-pointer" href="#blog">BLOG</a>
+            <ul
+              class="absolute left-0 top-10 pt-[10px] hidden group-hover:block bg-white text-black shadow-md min-w-[250px] z-50">
+              <div class="absolute top-0 left-6 -translate-y-1/2 w-5 h-5 bg-white rotate-45 z-[-1]"></div>
+              <li><a href="#blog"
+                  class="block px-4 py-2 hover:text-light-green transition-all duration-300 transform hover:translate-x-2">Blog</a>
+              </li>
+              <li><a href="#blog-details"
+                  class="block px-4 py-2 hover:text-light-green transition-all duration-300 transform hover:translate-x-2">Blog
+                  Details</a></li>
+            </ul>
+          </li>
+          <li><a class="no-underline text-white hover:text-light-green font-normal" href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+
+      <div class="btns flex gap-3 h-full pt-6 pr-3 pb-4  xl1400:border-l-[1px] border-border1">
+        <button
+          class="talk relative overflow-hidden group font-prompt flex gap-1 text-black text-xl font-thin rounded-md ml-5 mb-2 pt-4 pb-4 pl-4 pr-4 border border-none bg-light-green">
+          <span class="relative z-10 flex items-center gap-1 group-hover:text-black transition-colors duration-300">
+            Let's Talk
+            <img class="h-8" src="assets/arrow-narrow-up-svgrepo-com.png" alt="">
+          </span>
+          <span
+            class="absolute top-0 left-0 h-full w-full bg-[#839f14a9] translate-y-[-100%] group-hover:translate-y-0 transition-transform duration-700 ease-in-out z-0">
+          </span>
+        </button>
+
+        <!-- Mobile menu toggle (only for tabs, visible <1024px) -->
+        <button id="mobileMenuToggle" class="lg:hidden rounded-md p-2 ml-2">
+          <img class="h-12 invert" src="assets/hamburger.png" alt="menu" />
+        </button>
+
+
+        <button id="openSidebar" class="bg-white rounded-md pl-3 pr-3 mb-2">
+          <img class="h-8" src="assets/hamburger.png" alt="">
+        </button>
+      </div>
+
+    </nav>
+
+    <!-- Mobile Nav Menu -->
+    <div id="mobileMenu" class="lg:hidden fixed top-[70px] left-0 w-full bg-icons text-white z-40 hidden">
+      <ul class="flex flex-col gap-4 p-8 pt-12 font-prompt text-md">
+        <li class="border-b-[1px] border-pra"><a href="#home" class="hover:text-light-green">HOME</a></li>
+        <li class="border-b-[1px] border-pra"><a href="#about" class="hover:text-light-green">ABOUT</a></li>
+        <li class="border-b-[1px] border-pra"><a href="#work" class="hover:text-light-green">WORK</a></li>
+        <li class="border-b-[1px] border-pra"><a href="#services" class="hover:text-light-green">SERVICES</a></li>
+        <li class="border-b-[1px] border-pra"><a href="#testimonial" class="hover:text-light-green">TESTIMONIAL</a></li>
+        <li class="border-b-[1px] border-pra"><a href="#blog" class="hover:text-light-green">BLOG</a></li>
+        <li class="border-b-[1px] border-pra"><a href="#contact" class="hover:text-light-green">CONTACT</a></li>
+      </ul>
+    </div>
+
+
+    <div class="conatainer w-full h-full flex px-4 xl:px-[102px]">
+
+      <div class="left-banner absolute top-10 left-0 w-[10%] sm:w-[8%] md:w-[6%] h-[90%] flex flex-col  ">
+        <div class="number cursor-pointer h-1/2 flex flex-col justify-center items-center gap-16 font-prompt text-md">
+          <div class=""><img src="assets/keypad.png" alt=""></div>
+          <div class="  text-white font-kanit transform rotate-90 origin-center whitespace-nowrap">
+            (+02)-573-328-301</div>
+        </div>
+
+        <div class="down cursor-pointer h-1/2 flex flex-col justify-center items-center gap-14 font-prompt ">
+          <div class="text-pra transform rotate-90 origin-center whitespace-nowrap">SCROLL DOWN</div>
+          <div><img class="h-[80px]" src="assets/arrow-down.png" alt=""></div>
+        </div>
+      </div>
+
+      <div class="main-content h-full flex flex-col justify-center gap-8 px-2 sm:gap-10 md:gap-12 md:mx-5">
+
+        <div
+          class="availability border-b border-white hover:border-light-green w-[39%] cursor-pointer pb-4 group transition-all duration-300">
+
+          <div class="available text-white text-2xl group-hover:text-light-green transition-all duration-300 font-sarabun">
+            Currently Available For Freelance
+          </div>
+
+          <div
+            class="available text-white text-2xl flex gap-4 group-hover:text-light-green transition-all duration-300 font-sarabun">
+            Worldwide
+            <svg class="h-7 mt-1 transition-all duration-300 group-hover:stroke-light-green" fill="none"
+              viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+
+        </div>
+
+
+        <div class="creative">
+          <div class="visual text-white text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold font">Creative
+            Visual</div>
+          <div class="relative w-fit">
+            <div class="visual text-9xl sm:text-6xl md:text-7xl lg:text-8xl  font-bold text-transparent animate-fillUnfill
+              bg-gradient-to-r from-light-green to-light-green 
+              bg-no-repeat bg-left-top bg-[length:0%_120%]
+              [background-clip:text] 
+              [-webkit-background-clip:text] 
+              [-webkit-text-stroke:1px_white] 
+              [--webkit-text-fill-color:transparent]
+              leading-[1.1] pb-3">
+              Designer
+            </div>
+          </div>
+
+
+
+        </div>
+
+        <div class="video-area flex flex-wrap gap-5 sm:gap-6 md:gap-7 justify-start items-center">
+
+          <div>
+            <img class="animate-wiggle" src="assets/curlly-arrow.png" alt="">
+          </div>
+
+          <div class="relative flex justify-center items-center h-16 w-16 sm:h-20 sm:w-20">
+            <!-- Pulse Ring -->
+            <div class="absolute h-20 w-20 rounded-full border border-white opacity-75 animate-ping-slow"></div>
+
+            <!-- Play Button -->
+            <div class="play border cursor-pointer rounded-full flex justify-center items-center h-20 w-20 z-10">
+              <img class="h-6 " src="assets/play.png" alt="">
+            </div>
+          </div>
+
+          <div class="text-white text-xl font-medium">Work <br> Process</div>
+        </div>
+      </div>
+
+      <div class="image h-full flex items-end absolute right-4 ">
+        <img class="h-[65%] sm:h-[75%] md:h-[85%] object-contain" src="assets/man.png" alt="">
+      </div>
+
+
+      <div class="right-banner absolute right-0 w-[10%] h-[90%] flex flex-col items-center justify-center">
+        <div class="down h-1/2 cursor-pointer flex flex-col justify-end items-center gap-14 ">
+          <div class="text-pra font-prompt transform rotate-90 origin-center whitespace-nowrap">FOLLOW ME</div>
+          <div><img class="h-[80px]" src="assets/arrow-down.png" alt=""></div>
+        </div>
+
+        <div class="icons h-1/2 flex flex-col justify-center items-center gap-5 ">
+          <a href="#" class="group bg-icons h-9 w-9 flex justify-center items-center rounded-full">
+            <svg class="h-5 transition-all duration-300 group-hover:fill-light-green group-hover:stroke-light-green"
+              fill="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z">
+                </path>
+              </g>
+            </svg></a>
+
+          <a href="#" class="group bg-icons h-9 w-9 flex justify-center items-center rounded-full">
+            <svg class="h-5 transition-all duration-300 group-hover:fill-light-green group-hover:stroke-light-green"
+              fill="#ffffff" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 512 512" xml:space="preserve" stroke="#ffffff">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <g id="7935ec95c421cee6d86eb22ecd12f847">
+                  <path style="display: inline;"
+                    d="M459.186,151.787c0.203,4.501,0.305,9.023,0.305,13.565 c0,138.542-105.461,298.285-298.274,298.285c-59.209,0-114.322-17.357-160.716-47.104c8.212,0.973,16.546,1.47,25.012,1.47 c49.121,0,94.318-16.759,130.209-44.884c-45.887-0.841-84.596-31.154-97.938-72.804c6.408,1.227,12.968,1.886,19.73,1.886 c9.55,0,18.816-1.287,27.617-3.68c-47.955-9.633-84.1-52.001-84.1-102.795c0-0.446,0-0.882,0.011-1.318 c14.133,7.847,30.294,12.562,47.488,13.109c-28.134-18.796-46.637-50.885-46.637-87.262c0-19.212,5.16-37.218,14.193-52.7 c51.707,63.426,128.941,105.156,216.072,109.536c-1.784-7.675-2.718-15.674-2.718-23.896c0-57.891,46.941-104.832,104.832-104.832 c30.173,0,57.404,12.734,76.525,33.102c23.887-4.694,46.313-13.423,66.569-25.438c-7.827,24.485-24.434,45.025-46.089,58.002 c21.209-2.535,41.426-8.171,60.222-16.505C497.448,118.542,479.666,137.004,459.186,151.787z">
+                  </path>
+                </g>
+              </g>
+            </svg></a>
+
+          <a href="" class="group bg-icons h-9 w-9 flex justify-center items-center rounded-full"><svg
+              class="h-5 transition-all duration-300 group-hover:fill-light-green group-hover:stroke-light-green"
+              viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M18.72 3.99997H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 4.22471 4.42573 4.34081C4.29848 4.45692 4.19537 4.59699 4.12232 4.75299C4.04927 4.909 4.0077 5.07788 4 5.24997V18.63C4.01008 18.9901 4.15766 19.3328 4.41243 19.5875C4.6672 19.8423 5.00984 19.9899 5.37 20H18.72C19.0701 19.9844 19.4002 19.8322 19.6395 19.5761C19.8788 19.32 20.0082 18.9804 20 18.63V5.24997C20.0029 5.08247 19.9715 4.91616 19.9078 4.76122C19.8441 4.60629 19.7494 4.466 19.6295 4.34895C19.5097 4.23191 19.3672 4.14059 19.2108 4.08058C19.0544 4.02057 18.8874 3.99314 18.72 3.99997ZM9 17.34H6.67V10.21H9V17.34ZM7.89 9.12997C7.72741 9.13564 7.5654 9.10762 7.41416 9.04768C7.26291 8.98774 7.12569 8.89717 7.01113 8.78166C6.89656 8.66615 6.80711 8.5282 6.74841 8.37647C6.6897 8.22474 6.66301 8.06251 6.67 7.89997C6.66281 7.73567 6.69004 7.57169 6.74995 7.41854C6.80986 7.26538 6.90112 7.12644 7.01787 7.01063C7.13463 6.89481 7.2743 6.80468 7.42793 6.74602C7.58157 6.68735 7.74577 6.66145 7.91 6.66997C8.07259 6.66431 8.2346 6.69232 8.38584 6.75226C8.53709 6.8122 8.67431 6.90277 8.78887 7.01828C8.90344 7.13379 8.99289 7.27174 9.05159 7.42347C9.1103 7.5752 9.13699 7.73743 9.13 7.89997C9.13719 8.06427 9.10996 8.22825 9.05005 8.3814C8.99014 8.53456 8.89888 8.6735 8.78213 8.78931C8.66537 8.90513 8.5257 8.99526 8.37207 9.05392C8.21843 9.11259 8.05423 9.13849 7.89 9.12997ZM17.34 17.34H15V13.44C15 12.51 14.67 11.87 13.84 11.87C13.5822 11.8722 13.3313 11.9541 13.1219 12.1045C12.9124 12.2549 12.7546 12.4664 12.67 12.71C12.605 12.8926 12.5778 13.0865 12.59 13.28V17.34H10.29V10.21H12.59V11.21C12.7945 10.8343 13.0988 10.5225 13.4694 10.3089C13.84 10.0954 14.2624 9.98848 14.69 9.99997C16.2 9.99997 17.34 11 17.34 13.13V17.34Z"
+                  fill="#ffffff"></path>
+              </g>
+            </svg></a>
+
+          <a href="" class="group bg-icons h-9 w-9 flex justify-center items-center rounded-full"><svg
+              class="h-5 transition-all duration-300 group-hover:fill-light-green group-hover:stroke-light-green"
+              viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <g id="icomoon-ignore"> </g>
+                <path
+                  d="M16 2.672c-0.004 0-0.007 0-0.011 0-0.002 0-0.003 0-0.005 0-0.005 0-0.010 0.001-0.016 0.001-7.347 0.017-13.296 5.977-13.296 13.327 0 7.348 5.949 13.309 13.296 13.327 0.005 0 0.010 0.001 0.016 0.001 0.002 0 0.004 0 0.005 0 0.004 0 0.008 0 0.011 0 7.36 0 13.328-5.968 13.328-13.328s-5.968-13.328-13.328-13.328zM16.533 10.648c1.413-0.039 2.788-0.225 4.112-0.548 0.399 1.571 0.647 3.382 0.686 5.367h-4.798v-4.819zM16.533 9.582v-5.759c1.437 0.398 2.893 2.314 3.821 5.252-1.231 0.297-2.509 0.47-3.821 0.507zM15.467 3.81v5.772c-1.323-0.037-2.611-0.213-3.852-0.515 0.936-2.956 2.405-4.879 3.852-5.256zM15.467 10.647v4.82h-4.831c0.039-1.988 0.287-3.801 0.687-5.373 1.334 0.326 2.72 0.515 4.144 0.553zM9.563 15.467h-5.811c0.118-2.741 1.139-5.252 2.773-7.241 1.187 0.654 2.446 1.189 3.766 1.589-0.431 1.7-0.689 3.617-0.728 5.652zM9.563 16.533c0.039 2.034 0.297 3.951 0.728 5.651-1.319 0.401-2.579 0.936-3.766 1.59-1.635-1.989-2.656-4.5-2.773-7.241h5.811zM10.636 16.533h4.831v4.814c-1.424 0.038-2.81 0.228-4.145 0.555-0.399-1.571-0.647-3.383-0.686-5.369zM15.467 22.412v5.778c-1.448-0.378-2.919-2.303-3.854-5.263 1.241-0.302 2.53-0.478 3.854-0.515zM16.533 28.178v-5.765c1.313 0.038 2.591 0.211 3.822 0.508-0.928 2.941-2.384 4.86-3.822 5.257zM16.533 21.347v-4.814h4.798c-0.039 1.983-0.286 3.791-0.684 5.361-1.325-0.323-2.7-0.51-4.113-0.548zM22.404 16.533h5.845c-0.118 2.741-1.138 5.251-2.773 7.24-1.197-0.658-2.467-1.197-3.797-1.599 0.43-1.698 0.687-3.611 0.726-5.64zM22.404 15.467c-0.039-2.033-0.297-3.946-0.727-5.646 1.33-0.402 2.599-0.94 3.795-1.598 1.636 1.989 2.658 4.501 2.776 7.244h-5.845zM24.738 7.409c-1.061 0.564-2.18 1.031-3.35 1.385-0.623-2.005-1.498-3.642-2.533-4.717 2.27 0.545 4.297 1.719 5.883 3.332zM13.103 4.087c-1.029 1.073-1.9 2.702-2.521 4.697-1.158-0.353-2.268-0.815-3.319-1.375 1.575-1.602 3.587-2.774 5.84-3.322zM7.259 24.587c1.052-0.561 2.163-1.024 3.322-1.377 0.621 1.997 1.492 3.629 2.522 4.702-2.255-0.549-4.268-1.721-5.844-3.326zM18.855 27.922c1.036-1.075 1.911-2.712 2.535-4.721 1.17 0.355 2.29 0.82 3.351 1.387-1.586 1.614-3.614 2.791-5.886 3.334z"
+                  fill="#ffffff"> </path>
+              </g>
+            </svg></a>
+
+          <a href="" class="group bg-icons h-9 w-9 flex justify-center items-center rounded-full"><svg
+              class="h-5 transition-all duration-300 group-hover:fill-light-green group-hover:stroke-light-green"
+              viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                  fill="#ffffff"></path>
+                <path
+                  d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                  fill="#ffffff"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+                  fill="#ffffff"></path>
+              </g>
+            </svg></a>
+        </div>
+
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+  <div
+    class="sidebar fixed right-0 top-0 bg-black w-[22%] h-full z-[99999] flex flex-col overflow-y-auto translate-x-full transition-transform duration-300 ease-in-out"
+    id="sidebar">
+
+    <div class="flex justify-end mt-3 mr-3"><button id="closeSidebar"
+        class="bg-light-green h-10 w-10 flex justify-center items-center rounded-md ">
+        <img class="h-7" src="assets/cross.png" alt="">
+      </button></div>
+
+    <div class="side-content mt-10 ml-5 mr-5">
+
+      <div class="logo1 ">
+        <img src="assets/logo.png" alt="">
+      </div>
+
+      <p class="text-pra font-kanit font-extralight mt-4 text-sm">Neque porro quisquam est, qui dolorem ipsum quia
+        dolor sit consectetur, aliquam quaerats voluptatem. Ut enim ad minima veniam, exercitationem laboriosam,
+        nisi ut aliquid ex ea autem velit esse quam nihil</p>
+
+      <h3 class="text-pra font-kanit font-extralight mt-8 text-md">ADDRESS</h3>
+      <p class="text-white font-kanit font-extralight mt-2">Victoria Street London,</p>
+      <h3 class="text-pra font-kanit font-extralight text-md mt-6">EMAIL</h3>
+      <p class="text-white font-kanit font-extralight mt-2">Matias999@.com</p>
+      <h3 class="text-pra font-kanit font-extralight text-md mt-6">CALL NOW</h3>
+      <p class="text-white font-kanit font-extralight mt-2">+98 4758 2154 021</p>
+
+      <div>
+        <ul class="flex justify-start mt-10 items-center gap-4">
+          <li
+            class="bg-light-green h-11 w-11 flex justify-center items-center rounded-full group transition-all duration-300">
+            <a href="#"><img class="h-5 filter brightness-0 group-hover:invert" src="assets/facebook.png" alt=""></a>
+          </li>
+          <li
+            class="bg-light-green h-11 w-11 flex justify-center items-center rounded-full group transition-all duration-300">
+            <a href="#"><img class="h-5 filter brightness-0 group-hover:invert" src="assets/twitter.png" alt=""></a>
+          </li>
+          <li
+            class="bg-light-green h-11 w-11 flex justify-center items-center rounded-full group transition-all duration-300">
+            <a href="#"><img class="h-5 filter brightness-0 group-hover:invert" src="assets/linkedin.png" alt=""></a>
+          </li>
+          <li
+            class="bg-light-green h-11 w-11 flex justify-center items-center rounded-full group transition-all duration-300">
+            <a href="#"><img class="h-5 filter brightness-0 group-hover:invert" src="assets/youtube.png" alt=""></a>
+          </li>
+        </ul>
+      </div>
+
+
+      <button
+        class="relative overflow-hidden group font-kanit flex gap-1 text-black text-xl rounded-md w-[95%] h-[60px] pt-7 pb-7 justify-center mt-20 font-extralight border border-none bg-light-green">
+        <span class="relative z-10 flex items-center gap-1 group-hover:text-black transition-colors duration-300">
+          <img class="h-8" src="assets/caret.png" alt="">
+          Let's Talk
+        </span>
+        <span
+          class="absolute top-0 left-0 h-full w-full bg-[#839f14a9] translate-y-[-100%] group-hover:translate-y-0 transition-transform duration-700 ease-in-out z-0">
+        </span>
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <section class="bg-light-green py-[30px] overflow-hidden w-full h-[90px] whitespace-nowrap">
+    <div class="inline-block animate-slide whitespace-nowrap">
+      <img src="assets/web-design.png" class=" h-[30px] inline " />
+      <img src="assets/mob-app-design.png" class="h-[30px] inline" />
+      <img src="assets/ui-ux-design.png" class="h-[30px] inline" />
+      <img src="assets/business-branding.png" class="h-[30px] inline" />
+      <img src="assets/web-design.png" class="h-[30px] inline" />
+      <img src="assets/mob-app-design.png" class="h-[30px] inline" />
+      <img src="assets/ui-ux-design.png" class="h-[30px] inline" />
+      <img src="assets/business-branding.png" class="h-[30px] inline" />
+      <img src="assets/web-design.png" class="h-[30px] inline" />
+      <img src="assets/mob-app-design.png" class="h-[30px] inline" />
+      <img src="assets/ui-ux-design.png" class="h-[30px] inline" />
+      <img src="assets/business-branding.png" class="h-[30px] inline" />
+      <!-- repeat logos as needed for infinite loop -->
+    </div>
+  </section>
+
+  <section id="about" class="about bg-icons p-12">
+    <div class="flex justify-center flex-col items-center  mt-12">
+
+      <div class="reveal opacity-0 translate-y-10 transition-all duration-1000 mt-6 mb-6">
+        <img src="assets/flower.png" alt="">
+      </div>
+
+      <div
+        class="reveal opacity-0 translate-y-10 transition-all duration-1000 text-[42px] mb-12 text-white flex flex-col justify-center items-center text-center font-sarabun">
+        <div>I'm David Matias, I'm a Brand & Webflow Designer, Currently residing</div>
+        <div>in the lush Victoria Street London, Matias operates globally and is</div>
+        <div>ready to take on any design challenge.</div>
+      </div>
+
+
+      <div class="tabs1 mb-12 mt-6">
+        <ul class="tab2 flex gap-4 text-white font-sarabun text-xl">
+          <li id="about" class="rounded-lg pt-4 pb-4 pl-7 pr-7 bg-btn cursor-pointer" data-target="personal-content">
+            <a href="#about" class="block">ABOUT</a>
+          </li>
+          <li id="experience" class="rounded-lg pt-4 pb-4 pl-7 pr-7 bg-btn cursor-pointer"
+            data-target="experience-content">
+            <a href="#experience" class="block">EXPERIENCE</a>
+          </li>
+          <li id="education" class="rounded-lg pt-4 pb-4 pl-7 pr-7 bg-btn cursor-pointer"
+            data-target="education-content">
+            <a href="#education" class="block">EDUCATION</a>
+          </li>
+          <li id="skills" class="rounded-lg pt-4 pb-4 pl-7 pr-7 bg-btn cursor-pointer" data-target="skills-content">
+            <a href="#skills" class="block">SKILLS</a>
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="personal w-[95%] h-[627px] mt-12 bg-[url('/assets/bacground.png')] bg-no-repeat bg-center bg-cover rounded-lg flex justify-center items-center p-10">
+        <div class="person1 reveal person1 opacity-0 translate-y-10 transition-all duration-1000 w-[45%]">
+          <img  src="assets/person-info.png" alt="">
+        </div>
+
+        <div class="show-content w-[55%] h-full reveal  opacity-0 translate-y-10 transition-all duration-1000"></div>
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+  <div class="hidden">
+    <div id="personal-content" class="w-[55%] font-sarabun  tab-content block">
+      <h2 class="text-5xl text-white mb-6 font-bold">Personal Info</h2>
+      <p class="text-lg text-pra mb-8">Neque porro quisquam est, qui dolorem ipsum quia dolor sit consectetur,
+        aliquam quaerats voluptatem. Ut
+        enim ad minima veniam, exercitationem laboriosam, nisi ut aliquid ex ea autem velit esse quam nihil</p>
+      <div class="person2 grid grid-cols-2 grid-rows-2 gap-6">
+        <div
+          class="bg-back p-6 flex flex-col justify-start items-start gap-5 rounded-lg border border-transparent hover:border-light-green transition-all duration-300">
+          <div class="text-pra text-lg ">Email</div>
+          <p class="text-white text-xl">Matias999@Gmail.Com</p>
+        </div>
+        <div
+          class="bg-back p-6 flex flex-col justify-start items-start gap-5 rounded-lg border border-transparent hover:border-light-green transition-all duration-300">
+          <div class="text-pra text-lg ">Phone</div>
+          <p class="text-white text-xl">+(2) 871 382 023</p>
+        </div>
+        <div
+          class="bg-back p-6 flex flex-col justify-start items-start gap-5 rounded-lg border border-transparent hover:border-light-green transition-all duration-300">
+          <div class='text-pra text-lg '>Location</div>
+          <p class="text-white text-xl">Victoria Street London,</p>
+        </div>
+        <div
+          class="bg-back p-6 flex flex-col justify-start items-start gap-5 rounded-lg border border-transparent hover:border-light-green transition-all duration-300">
+          <div class="text-pra text-lg ">Follow</div>
+          <div class="flex gap-4">
+            <a href=""><img class="h-6 " src="assets/facebook.png" alt=""></a>
+            <a href=""><img class="h-6" src="assets/twitter.png" alt=""></a>
+            <a href=""><img class="h-6" src="assets/linkedin.png" alt=""></a>
+            <a href=""><img class="h-6" src="assets/global.png" alt=""></a>
+            <a href=""><img class="h-6" src="assets/instagram.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="experience-content" class="w-[55%] h-full font-sarabun tab-content hidden">
+      <h2 class="text-5xl text-white mb-6 font-bold">My Experience</h2>
+      <p class="text-lg text-pra mb-8">Neque porro quisquam est, qui dolorem ipsum quia dolor sit consectetur, aliquam
+        quaerats voluptatem. Ut enim ad minima veniam, exercitationem laboriosam, nisi ut aliquid ex ea autem velit esse
+        quam nihil</p>
+
+      <div
+        class="flex justify-between items-center mt-5 h-[20%] border-t-[0.5px] border-c-border hover:border-light-green transition-all duration-300 ">
+        <div class="year text-light-green text-xl">In 2011</div>
+        <div class="flex justify-evenly flex-col h-full">
+          <div class="post text-white text-2xl font-bold">Software Engineer</div>
+          <div class="post2 text-pra text-xl">UI Head & Manager</div>
+        </div>
+      </div>
+
+      <div
+        class="flex justify-between items-center  h-[20%] border-t-[0.5px] border-c-border hover:border-light-green transition-all duration-300">
+        <div class="year text-light-green text-xl">In 2016</div>
+        <div class="flex justify-evenly flex-col h-full ">
+          <div class="post text-white text-2xl font-bold">Product Designer</div>
+          <div class="post2 text-pra text-xl">Head of Department</div>
+        </div>
+      </div>
+
+      <div
+        class="flex justify-between items-center  h-[20%] border-t-[0.5px] border-b-[0.5px] border-c-border hover:border-light-green transition-all duration-300">
+        <div class="year text-light-green text-xl">In 2023</div>
+        <div class="flex justify-evenly flex-col h-full">
+          <div class="post text-white text-2xl font-bold">Senior UI Designer</div>
+          <div class="post2 text-pra text-xl">Fiverr.com</div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <div id="education-content" class="w-[55%] h-full font-sarabun tab-content hidden">
+      <h2 class="text-5xl text-white mb-6 font-bold">My Education</h2>
+      <p class="text-lg text-pra mb-8">Neque porro quisquam est, qui dolorem ipsum quia dolor sit consectetur, aliquam
+        quaerats voluptatem. Ut enim ad minima veniam, exercitationem laboriosam, nisi ut aliquid ex ea autem velit esse
+        quam nihil</p>
+
+      <div
+        class="flex justify-between items-center mt-5 h-[20%] border-t-[0.5px] border-c-border hover:border-light-green transition-all duration-300 ">
+        <div class="year text-light-green text-xl">2011-2013</div>
+        <div class="flex justify-evenly flex-col h-full">
+          <div class="post text-white text-2xl font-bold">Programming Course</div>
+          <div class="post2 text-pra text-xl">New York University</div>
+        </div>
+      </div>
+
+      <div
+        class="flex justify-between items-center  h-[20%] border-t-[0.5px] border-c-border hover:border-light-green transition-all duration-300">
+        <div class="year text-light-green text-xl">2013-2016</div>
+        <div class="flex justify-evenly flex-col h-full ">
+          <div class="post text-white text-2xl font-bold">University of Design</div>
+          <div class="post2 text-pra text-xl">Kingston, United States</div>
+        </div>
+      </div>
+
+      <div
+        class="flex justify-between items-center  h-[20%] border-t-[0.5px] border-b-[0.5px] border-c-border hover:border-light-green transition-all duration-300">
+        <div class="year text-light-green text-xl">2016-2018</div>
+        <div class="flex justify-evenly flex-col h-full">
+          <div class="post text-white text-2xl font-bold">Web Design Course</div>
+          <div class="post2 text-pra text-xl">New York University</div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="skills-content" class="w-[55%] font-sarabun tab-content hidden">
+      <h2 class="text-5xl text-white mb-6 font-bold">My Skills</h2>
+      <p class="text-lg text-pra mb-8">Neque porro quisquam est, qui dolorem ipsum quia dolor sit consectetur, aliquam
+        quaerats voluptatem. Ut enim ad minima veniam, exercitationem laboriosam, nisi ut aliquid ex ea autem velit esse
+        quam nihil</p>
+      <div class="grid2 grid grid-cols-2 grid-rows-2 gap-6">
+        <div
+          class="bg-back p-6 flex  justify-start items-center gap-5 rounded-lg border border-transparent hover:border-light-green transition-all duration-300">
+          <div><img src="assets/figma.png" alt=""></div>
+          <div class="flex justify-center flex-col">
+            <div class="text-pra text-xl ">Figma</div>
+            <p class="text-white text-5xl">90%</p>
+          </div>
+        </div>
+        <div
+          class="bg-back p-6 flex  justify-start items-center gap-5 rounded-lg border border-transparent hover:border-light-green transition-all duration-300">
+          <div><img src="assets/wordpress.png" alt=""></div>
+          <div class="flex justify-center flex-col">
+            <div class="text-pra text-xl ">Wordpress</div>
+            <p class="text-white text-5xl">95%</p>
+          </div>
+        </div>
+        <div
+          class="bg-back p-6 flex  justify-start items-center gap-5 rounded-lg border border-transparent hover:border-light-green transition-all duration-300">
+          <div><img src="assets/html.png" alt=""></div>
+          <div class="flex justify-center flex-col">
+            <div class='text-pra text-xl '>HTML</div>
+            <p class="text-white text-5xl">85%</p>
+          </div>
+        </div>
+        <div
+          class="bg-back p-6 flex  justify-start items-center gap-5 rounded-lg border border-transparent hover:border-light-green transition-all duration-300">
+          <div><img src="assets/bootstrap.png" alt=""></div>
+          <div class="flex justify-center flex-col">
+            <div class="text-pra text-xl ">Bootstrap</div>
+            <p class="text-white text-5xl">97%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="bg-light-green py-[30px] overflow-hidden w-full h-[90px] whitespace-nowrap">
+    <div class="inline-block animate-marqueeRight whitespace-nowrap">
+      <img src="assets/web-design.png" class=" h-[30px] inline " />
+      <img src="assets/mob-app-design.png" class="h-[30px] inline" />
+      <img src="assets/ui-ux-design.png" class="h-[30px] inline" />
+      <img src="assets/business-branding.png" class="h-[30px] inline" />
+      <img src="assets/web-design.png" class="h-[30px] inline" />
+      <img src="assets/mob-app-design.png" class="h-[30px] inline" />
+      <img src="assets/ui-ux-design.png" class="h-[30px] inline" />
+      <img src="assets/business-branding.png" class="h-[30px] inline" />
+      <img src="assets/web-design.png" class="h-[30px] inline" />
+      <img src="assets/mob-app-design.png" class="h-[30px] inline" />
+      <img src="assets/ui-ux-design.png" class="h-[30px] inline" />
+      <img src="assets/business-branding.png" class="h-[30px] inline" />
+      <!-- repeat logos as needed for infinite loop -->
+    </div>
+  </section>
+
+  <section>
+    <div
+      class="awards bg-[url('/assets/bacground.png')] w-full bg-no-repeat bg-center bg-cover text-white pl-[100px] pr-[100px] pt-[150px] pb-[100px] ">
+      <div class="flex justify-between mb-10 reveal opacity-0 translate-y-10 transition-all duration-1000 items-center">
+        <span class="our-text text-[42px]">Our Awards</span>
+        <a class="text-light-green text-xl" href="">View My Work</a>
+      </div>
+
+      <div class="our grid grid-cols-3 grid-rows-4 text-xl reveal opacity-0 translate-y-10 transition-all duration-1000">
+        <div class="border-t-[0.5px] border-nav-border pt-8 pb-8 ">Site Of The Day</div>
+        <div class="our1 border-t-[0.5px] border-nav-border pt-8 pb-8 pl-[180px] ">CSS & Animation</div>
+        <div class="border-t-[0.5px] border-nav-border pt-8 pb-8 flex justify-end">2018</div>
+        <div class="border-t-[0.5px] border-nav-border pt-8 pb-8 ">Best Business Model</div>
+        <div class="our1 border-t-[0.5px] border-nav-border pt-8 pb-8 pl-[180px] ">New Strategy</div>
+        <div class="border-t-[0.5px] border-nav-border pt-8 pb-8 flex justify-end">2019</div>
+        <div class="border-t-[0.5px] border-nav-border pt-8 pb-8 ">Motion Graphic</div>
+        <div class="our1 border-t-[0.5px] border-nav-border pt-8 pb-8 pl-[180px] ">3D & Visual Effect</div>
+        <div class="border-t-[0.5px] border-nav-border pt-8 pb-8 flex justify-end">2020</div>
+        <div class="border-t-[0.5px] border-nav-border pt-8 pb-8 border-b-[0.5px] ">Video Design</div>
+        <div class="our1 border-t-[0.5px] border-nav-border pt-8 pb-8 border-b-[0.5px] pl-[180px] ">CSS & Animation</div>
+        <div class="border-t-[0.5px] border-nav-border pt-8 pb-8 border-b-[0.5px] flex justify-end">2022</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="work" class="work bg-icons pt-32 pl-20 pr-20">
+    <div
+      class="text-light-green flex justify-center items-center gap-4 mb-8 reveal  opacity-0 translate-y-10 transition-all duration-1000">
+      <div class="h-[1px] bg-light-green w-20"></div>
+      <div class="font-caveat text-2xl font-medium ">Complete Project</div>
+      <div class="h-[1px] bg-light-green w-20"></div>
+    </div>
+    <div class=" mb-20 reveal  opacity-0 translate-y-10 transition-all duration-1000 text-center">
+      <div class="portfolio text-white text-6xl font-sarabun flex justify-center">Look At My Portfolio And Give Me <br>
+         Your Feedback</div>
+    </div>
+
+    <div class="main-cards flex justify-between">
+      <div class="c1 flex flex-col gap-10 ">
+
+        <div class="p1 group reveal  opacity-0 translate-y-10 transition-all duration-1000 font-sarabun">
+          <div class="overflow-hidden"><img class="transform transition duration-300 group-hover:scale-105"
+              src="assets/product1.png" alt=""></div>
+          <div class="flex items-center justify-between">
+            <div class="flex flex-col pt-8 pb-8">
+              <span class="text-light-green text-lg font-kanit mb-4">PRODUCT DESIGN</span>
+              <span class="text-white text-3xl font-kanit">Brand Identity & Motion Design</span>
+            </div>
+            <a class="bg-arrow h-16 w-16 flex justify-center items-center rounded-md group-hover:bg-light-green transition-all duration-300"
+              href=""><img class="h-8 group-hover:invert transition-all duration-300" src="assets/tilt-arrow.svg"
+                alt=""></a>
+          </div>
+        </div>
+
+        <div class="p2 group reveal  opacity-0 translate-y-10 transition-all duration-1000 font-sarabun">
+          <div class="overflow-hidden"><img class="transform transition duration-300 group-hover:scale-105"
+              src="assets/product2.png" alt=""></div>
+          <div class="flex items-center justify-between">
+            <div class="flex flex-col pt-8 pb-8">
+              <span class="text-light-green text-lg font-kanit mb-4">PRODUCT DESIGN</span>
+              <span class="text-white text-3xl font-kanit">Brand Identity & Motion Design</span>
+            </div>
+            <a class="bg-arrow h-16 w-16 flex justify-center items-center rounded-md group-hover:bg-light-green transition-all duration-300"
+              href=""><img class="h-8 group-hover:invert transition-all duration-300" src="assets/tilt-arrow.svg"
+                alt=""></a>
+          </div>
+        </div>
+
+        <div class="p3 group reveal  opacity-0 translate-y-10 transition-all duration-1000 font-sarabun">
+          <div class="overflow-hidden"><img class="transform transition duration-300 group-hover:scale-105"
+              src="assets/product3.png" alt=""></div>
+          <div class="flex items-center justify-between">
+            <div class="flex flex-col pt-8 pb-8">
+              <span class="text-light-green text-lg font-kanit mb-4">PRODUCT DESIGN</span>
+              <span class="text-white text-3xl font-kanit">Brand Identity & Motion Design</span>
+            </div>
+            <a class="bg-arrow h-16 w-16 flex justify-center items-center rounded-md group-hover:bg-light-green transition-all duration-300"
+              href=""><img class="h-8 group-hover:invert transition-all duration-300" src="assets/tilt-arrow.svg"
+                alt=""></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="c2 flex flex-col gap-10 mb-14 ">
+
+        <div class="p4 group reveal  opacity-0 translate-y-10 transition-all duration-1000 font-sarabun">
+          <div class="overflow-hidden"><img class="transform transition duration-300 group-hover:scale-105"
+              src="assets/product4.png" alt=""></div>
+          <div class="flex items-center justify-between">
+            <div class="flex flex-col pt-8 pb-8">
+              <span class="text-light-green text-lg font-kanit mb-4">PRODUCT DESIGN</span>
+              <span class="text-white text-3xl font-kanit">Brand Identity & Motion Design</span>
+            </div>
+            <a class="bg-arrow h-16 w-16 flex justify-center items-center rounded-md group-hover:bg-light-green transition-all duration-300"
+              href=""><img class="h-8 group-hover:invert transition-all duration-300" src="assets/tilt-arrow.svg"
+                alt=""></a>
+          </div>
+        </div>
+
+        <div class="p5 group reveal  opacity-0 translate-y-10 transition-all duration-1000 font-sarabun">
+          <div class="overflow-hidden"><img class="transform transition duration-300 group-hover:scale-105"
+              src="assets/product5.png" alt=""></div>
+          <div class="flex items-center justify-between">
+            <div class="flex flex-col pt-8 pb-8">
+              <span class="text-light-green text-lg font-kanit mb-4">PRODUCT DESIGN</span>
+              <span class="text-white text-3xl font-kanit">Brand Identity & Motion Design</span>
+            </div>
+            <a class="bg-arrow h-16 w-16 flex justify-center items-center rounded-md group-hover:bg-light-green transition-all duration-300"
+              href=""><img class="h-8 group-hover:invert transition-all duration-300" src="assets/tilt-arrow.svg"
+                alt=""></a>
+          </div>
+        </div>
+
+        <div class="p6 group reveal  opacity-0 translate-y-10 transition-all duration-1000 font-sarabun">
+          <div class="overflow-hidden"><img class="transform transition duration-300 group-hover:scale-105"
+              src="assets/product6.png" alt=""></div>
+          <div class="flex items-center justify-between">
+            <div class="flex flex-col pt-8 pb-8">
+              <span class="text-light-green text-lg font-kanit mb-4">PRODUCT DESIGN</span>
+              <span class="text-white text-3xl font-kanit">Brand Identity & Motion Design</span>
+            </div>
+            <a class="bg-arrow h-16 w-16 flex justify-center items-center rounded-md group-hover:bg-light-green transition-all duration-300"
+              href=""><img class="h-8 group-hover:invert transition-all duration-300" src="assets/tilt-arrow.svg"
+                alt=""></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div
+      class="circle absolute right-[43%] bg-light-green h-[200px] w-[200px] rounded-full flex justify-center items-center flex-col group ">
+      <img class="h-8" src="assets/arrow-narrow-up-svgrepo-com.png" alt="">
+      <span class="text-lg">Click More Work</span>
+      <div
+        class="semi-circle absolute border-[1px] border-light-green h-[200px] w-[200px] rounded-full right-2 top-3 group-hover:-top-3 transition-all duration-300">
+      </div>
+    </div>
+  </section>
+
+  <section class="need mt-80">
+    <div
+      class="need-help mt-12 bg-[url('/assets/bacground.png')] bg-no-repeat bg-center bg-cover rounded-lg flex justify-center items-center p-20">
+
+      <div class="togeather w-[55%] h-full flex flex-col ">
+
+        <div class="text-light-green flex justify-start items-center gap-4 pb-10">
+          <div class="h-[1px] bg-light-green w-20"></div>
+          <div class="font-caveat text-2xl font-medium">Need a Project?</div>
+        </div>
+
+        <div
+          class="lets-work text-white text-6xl font-medium border-b-[0.5px] border-c-border hover:border-light-green transition-all duration-300 w-[90%] pb-8 text-center">
+          Let's Work Together. <br> Fixed A Meeting
+        </div>
+
+
+        <div
+          class=" flex gap-6 border-b-[0.5px] border-c-border hover:border-light-green transition-all duration-300 w-[90%] pb-8 pt-8">
+          <div class="h-16 bg-light-green  w-16 rounded-full flex justify-center items-center"><img class="h-8"
+              src="assets/mail.png" alt=""></div>
+          <div class="flex flex-col gap-2">
+            <span class="text-pra text-xl">Email</span>
+            <span class="text-white text-xl font-medium cursor-pointer">Davidmatias333@gmail.com</span>
+          </div>
+        </div>
+
+        <div
+          class="flex gap-6 border-b-[0.5px] border-c-border hover:border-light-green transition-all duration-300 w-[90%] pb-8 pt-8">
+          <div class="h-16 bg-light-green w-16 rounded-full flex justify-center items-center"><img class="h-8"
+              src="assets/mail.png" alt=""></div>
+          <div class="flex flex-col gap-2">
+            <span class="text-pra text-xl">Email</span>
+            <span class="text-white text-xl font-medium cursor-pointer">Davidmatias333@gmail.com</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="man-desk w-[45%]">
+        <img src="assets/desk.png" alt="">
+      </div>
+
+    </div>
+  </section>
+
+  <section id="services" class="services pt-32 pb-32 pl-20 pr-20">
+    <div class="text-light-green flex justify-center items-center gap-4 mb-8">
+      <div class="h-[1px] bg-light-green w-20"></div>
+      <div class="font-caveat text-2xl font-medium">Services That i Provide</div>
+      <div class="h-[1px] bg-light-green w-20"></div>
+    </div>
+    <div class="mb-20 text-center">
+      <div class="special-services text-white text-6xl font-kanit flex justify-center">My Special Service For Your</div>
+      <div class="special-services text-white text-6xl font-kanit flex justify-center"> Business Development</div>
+    </div>
+
+
+    <div
+      class="services-cards flex text-white justify-between border-t-[0.5px] border-b-[0.5px] pt-12 pb-12 border-c-border hover:border-light-green group transition-all duration-300">
+      <div class="text-xl">01</div>
+      <div class="flex flex-col">
+        <span class="text-xl font-medium">Designer</span>
+        <span class="big text-4xl font-bold group-hover:text-light-green transition-all duration-300">Illustration
+          Design</span>
+      </div>
+      <div class="flex text-md text-pra">Duis aute irure dolor in reprehenderit in voluptate velit <br> esse cillum
+        dolore eu fugiat nulla pariatur. sunt in culpa <br> qui officia deserunt mollit</div>
+      <div
+        class="h-16 w-16 bg-arrow flex justify-center items-center rounded-md group-hover:bg-light-green transition-all duration-300">
+        <img class="h-8 group-hover:brightness-0" src="assets/tilt-arrow.svg" alt="">
+      </div>
+    </div>
+
+    <div
+      class="services-cards flex text-white justify-between border-t-[0.5px] border-b-[0.5px] pt-12 pb-12 border-c-border hover:border-light-green group transition-all duration-300">
+      <div class="text-xl">02</div>
+      <div class="flex flex-col">
+        <span class="text-xl font-medium">Branding</span>
+        <span class="big text-4xl font-bold group-hover:text-light-green transition-all duration-300">Business
+          Branding</span>
+      </div>
+      <div class="flex text-md text-pra">Duis aute irure dolor in reprehenderit in voluptate velit <br> esse cillum
+        dolore eu fugiat nulla pariatur. sunt in culpa <br> qui officia deserunt mollit</div>
+      <div
+        class="h-16 w-16 bg-arrow flex justify-center items-center rounded-md group-hover:bg-light-green transition-all duration-300">
+        <img class="h-8 group-hover:brightness-0" src="assets/tilt-arrow.svg" alt="">
+      </div>
+    </div>
+
+    <div
+      class="services-cards flex text-white justify-between border-t-[0.5px] border-b-[0.5px] pt-12 pb-12 border-c-border hover:border-light-green group transition-all duration-300">
+      <div class="text-xl">03</div>
+      <div class="flex flex-col">
+        <span class="text-xl font-medium">UI/UX Design</span>
+        <span class="big text-4xl font-bold group-hover:text-light-green transition-all duration-300">Web UI/UX
+          Design</span>
+      </div>
+      <div class="flex text-md text-pra">Duis aute irure dolor in reprehenderit in voluptate velit <br> esse cillum
+        dolore eu fugiat nulla pariatur. sunt in culpa <br> qui officia deserunt mollit</div>
+      <div
+        class="h-16 w-16 bg-arrow flex justify-center items-center rounded-md group-hover:bg-light-green transition-all duration-300">
+        <img class="h-8 group-hover:brightness-0" src="assets/tilt-arrow.svg" alt="">
+      </div>
+    </div>
+
+    <div
+      class="services-cards flex text-white justify-between border-t-[0.5px] border-b-[0.5px] pt-12 pb-12 border-c-border hover:border-light-green group transition-all duration-300">
+      <div class="text-xl">04</div>
+      <div class="flex flex-col">
+        <span class="text-xl font-medium">Web Design</span>
+        <span class="big text-4xl font-bold group-hover:text-light-green transition-all duration-300">Application
+          Design</span>
+      </div>
+      <div class="flex text-md text-pra">Duis aute irure dolor in reprehenderit in voluptate velit <br> esse cillum
+        dolore eu fugiat nulla pariatur. sunt in culpa <br> qui officia deserunt mollit</div>
+      <div
+        class="h-16 w-16 bg-arrow flex justify-center items-center rounded-md group-hover:bg-light-green transition-all duration-300">
+        <img class="h-8 group-hover:brightness-0" src="assets/tilt-arrow.svg" alt="">
+      </div>
+    </div>
+
+    <div
+      class="services-cards flex text-white justify-between border-t-[0.5px] border-b-[0.5px] pt-12 pb-12 border-c-border hover:border-light-green group transition-all duration-300">
+      <div class="text-xl">05</div>
+      <div class="flex flex-col">
+        <span class="text-xl font-medium">SEO Analytics</span>
+        <span class="big text-4xl font-bold group-hover:text-light-green transition-all duration-300">Digital
+          Marketing</span>
+      </div>
+      <div class="flex text-md text-pra">Duis aute irure dolor in reprehenderit in voluptate velit <br> esse cillum
+        dolore eu fugiat nulla pariatur. sunt in culpa <br> qui officia deserunt mollit</div>
+      <div
+        class="h-16 w-16 bg-arrow flex justify-center items-center rounded-md group-hover:bg-light-green transition-all duration-300">
+        <img class="h-8 group-hover:brightness-0" src="assets/tilt-arrow.svg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="working">
+    <div
+      class="working2 bg-[url('/assets/bacground.png')] w-full bg-no-repeat bg-center bg-cover text-white pl-[50px] pr-[50px] pt-[150px] pb-[100px]">
+
+      <div class="text-light-green flex justify-center items-center gap-4 mb-8">
+        <div class="h-[1px] bg-light-green w-20"></div>
+        <div class="font-caveat text-2xl font-medium">Working Process</div>
+        <div class="h-[1px] bg-light-green w-20"></div>
+      </div>
+      <div class="mb-20 text-center">
+        <div class="dreams text-white text-6xl font-kanit flex justify-center">Your Dream Website In Just Few
+      Steps</div>
+      </div>
+
+      <div class="cards flex justify-center gap-6">
+
+        <div
+          class="card1 flex flex-col gap-6 border-[0.5px] border-nav-border rounded-lg pl-4 pt-6 pr-20 relative overflow-hidden hover:border-light-green group transition-all duration-300">
+          <div class="text-4xl font-medium">Concept</div>
+          <div class="text-pra text-lg">Nemo enim ipsam voluptatem voluptas sit <br> aspernatur aut odit aut fugit</div>
+          <div class="flex gap-3">
+            <ul class="flex flex-col gap-5 justify-center">
+              <li class="h-2.5 w-2.5 rounded-full bg-light-green "></li>
+              <li class="h-2.5 w-2.5 rounded-full bg-light-green "></li>
+              <li class="h-2.5 w-2.5 rounded-full bg-light-green "></li>
+            </ul>
+
+            <ul class=" text-pra justify-center flex flex-col gap-2 text-sm">
+              <li>Reviewing any existing branding</li>
+              <li>Target audience and competitors research</li>
+              <li>Developing a strategy</li>
+            </ul>
+          </div>
+
+          <div
+            class="h-20 w-16 absolute right-[-20px] bottom-[-30px] rounded-full bg-icons group-hover:bg-light-green transition-all duration-300">
+          </div>
+        </div>
+
+        <div
+          class="card2 flex flex-col gap-6 border-[0.5px] border-nav-border rounded-lg pl-4 pt-6 pb-6 pr-20 relative overflow-hidden hover:border-light-green group transition-all duration-300">
+          <h1 class="text-4xl font-medium">Design</h1>
+          <p class="text-pra text-lg">Nemo enim ipsam voluptatem voluptas sit <br> aspernatur aut odit aut fugit</p>
+          <div class="flex gap-3">
+            <ul class="flex flex-col gap-5 justify-center">
+              <li class="h-2.5 w-2.5 rounded-full bg-light-green "></li>
+              <li class="h-2.5 w-2.5 rounded-full bg-light-green "></li>
+              <li class="h-2.5 w-2.5 rounded-full bg-light-green "></li>
+            </ul>
+
+            <ul class=" text-pra justify-center flex flex-col gap-2 text-sm">
+              <li>Developing wireframes and mockup</li>
+              <li>Choosing typography, color palettes,</li>
+              <li>Refining the design</li>
+            </ul>
+          </div>
+          <div
+            class="h-20 w-16 absolute right-[-20px] bottom-[-30px] rounded-full bg-icons group-hover:bg-light-green transition-all duration-300">
+          </div>
+        </div>
+
+        <div
+          class="card3 flex flex-col gap-6 border-[0.5px] border-nav-border rounded-lg pl-4 pt-6 pb-6 pr-20 relative overflow-hidden hover:border-light-green group transition-all duration-300">
+          <h1 class="text-4xl font-medium">Webflow</h1>
+          <p class="text-pra text-lg">Nemo enim ipsam voluptatem voluptas sit <br> aspernatur aut odit aut fugit</p>
+          <div class="flex gap-3">
+            <ul class="flex flex-col gap-5 justify-center">
+              <li class="h-2.5 w-2.5 rounded-full bg-light-green "></li>
+              <li class="h-2.5 w-2.5 rounded-full bg-light-green "></li>
+              <li class="h-2.5 w-2.5 rounded-full bg-light-green "></li>
+            </ul>
+
+            <ul class=" text-pra justify-center flex flex-col gap-2 text-sm">
+              <li>Testing the website thoroughly launch</li>
+              <li>Target audience and competitors research</li>
+              <li>Developing a strategy</li>
+            </ul>
+          </div>
+          <div
+            class="h-20 w-16 absolute right-[-20px] bottom-[-30px] rounded-full bg-icons group-hover:bg-light-green transition-all duration-300">
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </section>
+
+  <section id="testimonial" class="testimonial p-20 flex justify-center items-center flex-col">
+    <div class="text-light-green flex justify-center items-center gap-4 mb-8">
+      <div class="h-[1px] bg-light-green w-20"></div>
+      <div class="font-caveat text-2xl font-medium">Testimonial</div>
+      <div class="h-[1px] bg-light-green w-20"></div>
+    </div>
+    <div class="mb-20">
+      <div class="testie text-white text-6xl font-kanit flex justify-center">Happy Words From Happy</div>
+      <div class="testie text-white text-6xl font-kanit flex justify-center"> Customer</div>
+    </div>
+
+    <div
+      class="slider bg-[url('/assets/bacground.png')] relative w-full bg-no-repeat bg-center bg-cover text-white pl-[50px] pr-[50px] pt-[50px] pb-[50px] rounded-lg flex ">
+
+      <div class="left-img flex flex-col items-center gap-20 relative left-0">
+        <div><img class="i1" src="assets/p1.png" alt=""></div>
+        <div><img class="i2" src="assets/p2.png" alt=""></div>
+      </div>
+
+      <section class="w-[65%]  py-12 bg-[url('/assets/comas.png')] bg-no-repeat">
+
+        <div class="swiper myTextSwiper w-[90%] mx-auto">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide text-xl font-medium px-6">
+              <ul class="flex gap-2 mb-8 mt-4">
+                <li><img class="h-5" src="assets/full-star.png" alt=""></li>
+                <li><img class="h-5" src="assets/full-star.png" alt=""></li>
+                <li><img class="h-5" src="assets/full-star.png" alt=""></li>
+                <li><img class="h-5" src="assets/full-star.png" alt=""></li>
+                <li><img class="h-5" src="assets/full-star.png" alt=""></li>
+              </ul>
+              <p class="text-white italic mb-8">There are many variations of passages of Lorem Ipsum
+                available, by injected humour, or randomised words which
+                don't look even slightly believable. If you are going to
+                use a passage of Lorem Ipsum, you need to be hidden in
+                middle of text. All the Lorem Ipsum generators
+              </p>
+              <div class="text-light-green text-2xl mb-4">Nethon Jr</div>
+              <div class="text-pra font-normal text-lg">Business Owner</div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide  text-xl font-medium px-6 flex flex-col">
+              <ul class="flex gap-2 mb-8 mt-4">
+                <li><img class="h-5" src="assets/full-star.png" alt=""></li>
+                <li><img class="h-5" src="assets/full-star.png" alt=""></li>
+                <li><img class="h-5" src="assets/full-star.png" alt=""></li>
+                <li><img class="h-5" src="assets/full-star.png" alt=""></li>
+                <li><img class="h-5" src="assets/half-star.png" alt=""></li>
+              </ul>
+              <p class="text-white italic font-thin mb-8">There are many variations of passages of Lorem Ipsum
+                available, by injected humour, or randomised words which
+                don't look even slightly believable. If you are going to
+                use a passage of Lorem Ipsum, you need to be hidden in
+                middle of text. All the Lorem Ipsum generators
+              </p>
+              <div class="text-light-green text-2xl mb-4">Shawn Beltran</div>
+              <div class="text-pra font-normal text-lg">Business Owner</div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide  text-xl font-medium px-6 flex flex-col">
+              <ul class="flex gap-2 mb-8 mt-4">
+                <li><img class="h-5" src="assets/full-star.png" alt=""></li>
+                <li><img class="h-5" src="assets/full-star.png" alt=""></li>
+                <li><img class="h-5" src="assets/full-star.png" alt=""></li>
+                <li><img class="h-5" src="assets/full-star.png" alt=""></li>
+                <li><img class="h-6" src="assets/empty-star (1).png" alt=""></li>
+              </ul>
+              <p class="text-white italic font-thin mb-8">There are many variations of passages of Lorem Ipsum
+                available, by injected humour, or randomised words which
+                don't look even slightly believable. If you are going to
+                use a passage of Lorem Ipsum, you need to be hidden in
+                middle of text. All the Lorem Ipsum generators
+              </p>
+              <div class="text-light-green text-2xl mb-4">John Methcel</div>
+              <div class="text-pra font-normal text-lg">Business Owner</div>
+            </div>
+          </div>
+
+          <!-- Optional: Dots -->
+
+          <div class="custom-pagination mt-4 flex justify-end gap-2"></div>
+
+        </div>
+
+      </section>
+
+
+
+      <div class="right-img flex flex-col  items-end absolute right-14">
+        <div><img class="i3" src="assets/p3.png" alt=""></div>
+        <div class="i4 relative top-[120px]"><img class="animate-wiggle" src="assets/wiggle.png" alt=""></div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center justify-around text-white text-2xl font-bold mt-32 mb-20">
+      More Than 100+ Companies Trusted Us Worldwide
+    </div>
+    <div>
+      <ul class="walmart flex justify-around">
+        <li><a href=""><img class="hover:brightness-200 transition-all duration-300" src="assets/walmart.png"
+              alt=""></a></li>
+        <li><a href=""><img class="hover:brightness-200 transition-all duration-300" src="assets/linkedin-img.png"
+              alt=""></a></li>
+        <li><a href=""><img class="hover:brightness-200 transition-all duration-300" src="assets/google.png" alt=""></a>
+        </li>
+        <li><a href=""><img class="hover:brightness-200 transition-all duration-300" src="assets/slack.png" alt=""></a>
+        </li>
+        <li><a href=""><img class="hover:brightness-200 transition-all duration-300" src="assets/walmart.png"
+              alt=""></a></li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="blog" class="blog">
+    <div
+      class="blog-cards bg-[url('/assets/bacground.png')] w-full h-auto bg-no-repeat bg-center bg-cover text-white pl-[50px] pr-[50px] pt-[120px] pb-[120px] rounded-lg flex justify-center">
+
+      <div class="l w-[35%] pl-10">
+        <div class="text-light-green flex justify-start items-center gap-4 pb-6">
+          <div class="h-[1px] bg-light-green w-20"></div>
+          <div class="font-caveat text-2xl font-medium">My Blogs</div>
+        </div>
+
+        <div class="text-white text-6xl font-medium hover:border-light-green transition-all duration-300 pb-16 ">
+          Recent Posts
+        </div>
+
+        <div
+          class="circle absolute text-black bg-light-green h-[200px] w-[200px] rounded-full flex justify-center items-center flex-col group">
+          <img class="h-8" src="assets/arrow-narrow-up-svgrepo-com.png" alt="">
+          <span class="text-lg">Click More Work</span>
+          <div
+            class="semi-circle absolute border-[1px] border-light-green h-[200px] w-[200px] rounded-full right-2 top-3 group-hover:-top-3 transition-all duration-300">
+          </div>
+        </div>
+
+      </div>
+      <div class="r w-[65%]">
+
+        <div
+          class="blogs5 flex justify-between items-center border-t-[0.5px] border-b-[0.5px] border-nav-border pt-10 pb-16 group hover:border-light-green transition-all duration-300">
+          <div class="cont1 flex flex-col justify-around gap-8">
+            <div
+              class="text-pra border-[0.5px] border-nav-border rounded-full pt-1.5 pb-1.5 pl-3.5 pr-3.5 w-40 flex justify-center">
+              October 19, 2023
+            </div>
+            <div class="text-3xl font-bold group-hover:text-light-green transition-all duration-300">
+              Brand Design that <br> Helps The Company <br> Grow
+            </div>
+          </div>
+          <div class="img1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <a href=""><img class="h-40" src="assets/people1.png" alt=""></a>
+          </div>
+          <div
+            class="eye h-14 w-14 flex justify-center items-center border-[1px] rounded-full group-hover:border-light-green transition-all duration-300">
+            <svg class="h-4 transition-all duration-300 group-hover:fill-light-green group-hover:stroke-light-green"
+              fill="#ffffff" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+              <path
+                d="M16.108 10.044c-3.313 0-6 2.687-6 6s2.687 6 6 6 6-2.686 6-6-2.686-6-6-6zM16.108 20.044c-2.206 0-4.046-1.838-4.046-4.044s1.794-4 4-4c2.206 0 4 1.794 4 4s-1.748 4.044-3.954 4.044zM31.99 15.768c-0.012-0.050-0.006-0.104-0.021-0.153-0.006-0.021-0.020-0.033-0.027-0.051-0.011-0.028-0.008-0.062-0.023-0.089-2.909-6.66-9.177-10.492-15.857-10.492s-13.074 3.826-15.984 10.486c-0.012 0.028-0.010 0.057-0.021 0.089-0.007 0.020-0.021 0.030-0.028 0.049-0.015 0.050-0.009 0.103-0.019 0.154-0.018 0.090-0.035 0.178-0.035 0.269s0.017 0.177 0.035 0.268c0.010 0.050 0.003 0.105 0.019 0.152c0.006 0.023 0.021 0.032 0.028 0.052c0.010 0.027 0.008 0.061 0.021 0.089c2.91 6.658 9.242 10.428 15.922 10.428s13.011-3.762 15.92-10.422c0.015-0.029 0.012-0.058 0.023-0.090c0.007-0.017 0.020-0.030 0.026-0.050c0.015-0.049 0.011-0.102 0.021-0.154c0.018-0.090 0.034-0.177 0.034-0.27c0-0.088-0.017-0.175-0.035-0.266zM16 25.019c-5.665 0-11.242-2.986-13.982-8.99c2.714-5.983 8.365-9.047 14.044-9.047c5.678 0 11.203 3.067 13.918 9.053-2.713 5.982-8.301 8.984-13.981 8.984z">
+              </path>
+            </svg>
+          </div>
+        </div>
+
+        <div
+          class="blogs5 flex justify-between items-center border-b-[0.5px] border-nav-border pt-10 pb-16 group hover:border-light-green transition-all duration-300">
+          <div class="cont3 flex flex-col justify-around gap-8">
+            <div
+              class="text-pra border-[0.5px] border-nav-border rounded-full pt-1.5 pb-1.5 pl-3.5 pr-3.5 w-40 flex justify-center">
+              October 19, 2023
+            </div>
+            <div class="text-3xl font-bold group-hover:text-light-green transition-all duration-300">
+              Brand Design that <br> Helps The Company <br> Grow
+            </div>
+          </div>
+          <div class="img3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <a href=""><img class="h-40" src="assets/people2.png" alt=""></a>
+          </div>
+          <div
+            class="eye h-14 w-14 flex justify-center items-center border-[1px] rounded-full group-hover:border-light-green transition-all duration-300">
+            <svg class="h-4 transition-all duration-300 group-hover:fill-light-green group-hover:stroke-light-green"
+              fill="#ffffff" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+              <path
+                d="M16.108 10.044c-3.313 0-6 2.687-6 6s2.687 6 6 6 6-2.686 6-6-2.686-6-6-6zM16.108 20.044c-2.206 0-4.046-1.838-4.046-4.044s1.794-4 4-4c2.206 0 4 1.794 4 4s-1.748 4.044-3.954 4.044zM31.99 15.768c-0.012-0.050-0.006-0.104-0.021-0.153-0.006-0.021-0.020-0.033-0.027-0.051-0.011-0.028-0.008-0.062-0.023-0.089-2.909-6.66-9.177-10.492-15.857-10.492s-13.074 3.826-15.984 10.486c-0.012 0.028-0.010 0.057-0.021 0.089-0.007 0.020-0.021 0.030-0.028 0.049-0.015 0.050-0.009 0.103-0.019 0.154-0.018 0.090-0.035 0.178-0.035 0.269s0.017 0.177 0.035 0.268c0.010 0.050 0.003 0.105 0.019 0.152c0.006 0.023 0.021 0.032 0.028 0.052c0.010 0.027 0.008 0.061 0.021 0.089c2.91 6.658 9.242 10.428 15.922 10.428s13.011-3.762 15.92-10.422c0.015-0.029 0.012-0.058 0.023-0.090c0.007-0.017 0.020-0.030 0.026-0.050c0.015-0.049 0.011-0.102 0.021-0.154c0.018-0.090 0.034-0.177 0.034-0.27c0-0.088-0.017-0.175-0.035-0.266zM16 25.019c-5.665 0-11.242-2.986-13.982-8.99c2.714-5.983 8.365-9.047 14.044-9.047c5.678 0 11.203 3.067 13.918 9.053-2.713 5.982-8.301 8.984-13.981 8.984z">
+              </path>
+            </svg>
+          </div>
+        </div>
+
+        <div
+          class="blogs5 flex justify-between items-center border-b-[0.5px] border-nav-border pt-10 pb-16 group hover:border-light-green transition-all duration-300">
+          <div class="cont3 flex flex-col justify-around gap-8">
+            <div
+              class="text-pra border-[0.5px] border-nav-border rounded-full pt-1.5 pb-1.5 pl-3.5 pr-3.5 w-40 flex justify-center">
+              October 19, 2023
+            </div>
+            <div class="text-3xl font-bold group-hover:text-light-green transition-all duration-300">
+              Brand Design that <br> Helps The Company <br> Grow
+            </div>
+          </div>
+          <div class="img3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <a href=""><img class="h-40" src="assets/people3.png" alt=""></a>
+          </div>
+          <div
+            class="eye h-14 w-14 flex justify-center items-center border-[1px] rounded-full group-hover:border-light-green transition-all duration-300">
+            <svg class="h-4 transition-all duration-300 group-hover:fill-light-green group-hover:stroke-light-green"
+              fill="#ffffff" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+              <path
+                d="M16.108 10.044c-3.313 0-6 2.687-6 6s2.687 6 6 6 6-2.686 6-6-2.686-6-6-6zM16.108 20.044c-2.206 0-4.046-1.838-4.046-4.044s1.794-4 4-4c2.206 0 4 1.794 4 4s-1.748 4.044-3.954 4.044zM31.99 15.768c-0.012-0.050-0.006-0.104-0.021-0.153-0.006-0.021-0.020-0.033-0.027-0.051-0.011-0.028-0.008-0.062-0.023-0.089-2.909-6.66-9.177-10.492-15.857-10.492s-13.074 3.826-15.984 10.486c-0.012 0.028-0.010 0.057-0.021 0.089-0.007 0.020-0.021 0.030-0.028 0.049-0.015 0.050-0.009 0.103-0.019 0.154-0.018 0.090-0.035 0.178-0.035 0.269s0.017 0.177 0.035 0.268c0.010 0.050 0.003 0.105 0.019 0.152c0.006 0.023 0.021 0.032 0.028 0.052c0.010 0.027 0.008 0.061 0.021 0.089c2.91 6.658 9.242 10.428 15.922 10.428s13.011-3.762 15.92-10.422c0.015-0.029 0.012-0.058 0.023-0.090c0.007-0.017 0.020-0.030 0.026-0.050c0.015-0.049 0.011-0.102 0.021-0.154c0.018-0.090 0.034-0.177 0.034-0.27c0-0.088-0.017-0.175-0.035-0.266zM16 25.019c-5.665 0-11.242-2.986-13.982-8.99c2.714-5.983 8.365-9.047 14.044-9.047c5.678 0 11.203 3.067 13.918 9.053-2.713 5.982-8.301 8.984-13.981 8.984z">
+              </path>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="get-in-touch-section pl-[100px] pr-[100px] pt-[100px] pb-[100px] ">
+    <div
+      class="get-in-touch border-[0.5px] border-nav-border text-[150px] font-normal rounded-lg text-white flex justify-center">
+      GET IN TOUCH
+    </div>
+
+    <div class="get-content text-white flex justify-between pt-20 ">
+      <div class="flex flex-col gap-20">
+        <span class="website text-2xl">Hello, I’m David Matias, Website & User <br> Interface Designer based in London.</span>
+        <a class="website text-4xl underline" href="">Davidmatias333@Gmail.Com</a>
+      </div>
+
+      <div class="footer3 flex gap-6">
+
+        <div class="footer4 flex flex-col gap-6">
+          <a class="footer-btn flex border-[0.5px] border-nav-border items-center text-2xl pt-7 pb-7 gap-32 pl-8
+          pr-8 rounded-lg  hover:bg-light-green hover:text-black transition-all duration-300 group" href="">Facebook
+            <svg class="h-8 transition-all duration-300  group-hover:brightness-0" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M4 12H20M20 12L16 8M20 12L16 16" stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </g>
+            </svg>
+          </a>
+          <a class="footer-btn flex border-[0.5px] border-nav-border justify-around items-center text-2xl pt-7 pb-7 gap-32 pl-8
+          pr-8  rounded-lg  hover:bg-light-green hover:text-black transition-all duration-300 group" href="">Dribble
+            <svg class="h-8 transition-all duration-300  group-hover:brightness-0" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M4 12H20M20 12L16 8M20 12L16 16" stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </g>
+            </svg>
+          </a>
+        </div>
+
+        <div class="footer4 flex flex-col gap-6">
+          <a class="footer-btn flex border-[0.5px] border-nav-border justify-around items-center text-2xl pt-7 pb-7 gap-32 pl-8
+          pr-8 rounded-lg  hover:bg-light-green hover:text-black transition-all duration-300 group" href="">Instagram
+            <svg class="h-8 transition-all duration-300  group-hover:brightness-0" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M4 12H20M20 12L16 8M20 12L16 16" stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </g>
+            </svg>
+          </a>
+          <a class="footer-btn flex border-[0.5px] border-nav-border justify-around items-center text-2xl pt-7 pb-7 gap-32 pl-8
+          pr-8 rounded-lg  hover:bg-light-green hover:text-black transition-all duration-300 group" href="">Webflow
+            <svg class="h-8 transition-all duration-300  group-hover:brightness-0" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M4 12H20M20 12L16 8M20 12L16 16" stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </g>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section-footer>
+    <div
+      class="footer bg-[url('/assets/bacground.png')] w-full bg-no-repeat bg-center bg-cover text-white rounded-lg flex justify-between items-center pl-16 pr-16 pt-8 pb-8">
+
+      <div class="copy text-lg">Copyright © 2025 <span class="text-light-green">Matias</span>. All rights reserved.</div>
+      <div class="flex gap-10">
+        <span class="text-lg">Terms & Condition</span>
+        <span class="text-lg">Privacy Policy</span>
+      </div>
+      <div class="h-12 w-10 rounded-md flex justify-center items-center bg-light-green"><img class="-rotate-90 h-6"
+          src="assets/arrow-narrow-up-svgrepo-com.png" alt=""></div>
+    </div>
+
+  </section-footer>
+
+  <script src="script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.myTextSwiper', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".custom-pagination", // custom class here
+        clickable: true,
+      },
+    });
+  </script>
+
+
+  </script>
+</body>
+
+</html>
